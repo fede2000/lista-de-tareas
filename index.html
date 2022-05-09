@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/CSS/style.css">
+    <title>Lista de Tareas</title>
+</head>
+<body>
+    <div class="list roundborder"> <!-- roundborder va ser una clase para dar bordes redondeados a todos los elementos que necesiten -->
+
+        <div class="date"> <!-- contenedor con la informacion de la fecha -->
+            <div class="dateLeft">
+                <div id="dateNumber"></div>
+                <div>
+                    <div id="dateMonth"></div>
+                    <div id="dateYear"></div>   
+                </div>
+            </div>
+            <div id="dateText"></div>
+        </div>
+        
+
+        <form onsubmit="addNewTask(event)">
+            <input type="text" name="taskText" autocomplete="off" placeholder="Nueva tarea" class="roundBorder">
+            <button type="submit" class="addTaskButton">+</button>
+            <button type="button" class="orderButton roundBorder" onclick="renderOrderedTask()">Ordenar</button>
+        </form>
+        <div id="tasksContainer"></div>
+    </div>
+
+
+    <script src="JavaScript/script.js"></script>
+</body>
+</html>
